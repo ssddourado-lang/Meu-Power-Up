@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Power-Up</title>
+  <script src="https://p.trellocdn.com/power-up.min.js"></script>
+</head>
+<body>
+  <h1>Bem-vindo ao Meu Power-Up!</h1>
+  <button id="getCard">Obter Dados do Cartão</button>
+
+  <script>
+    // Inicialize o Power-Up
+    var t = TrelloPowerUp.iframe();
+
+    document.getElementById('getCard').addEventListener('click', function () {
+      t.card('all').then(function (card) {
+        alert('Título do Cartão: ' + card.name);
+      });
+    });
+  </script>
+</body>
+</html>
